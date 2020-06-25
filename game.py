@@ -2,7 +2,7 @@ import random as rand
 
 
 class Player:
-    score = -1
+    score = 0
     name = None
     move = None
 
@@ -68,8 +68,8 @@ class Game:
                 self.create_game_scope(key, values[i:i+half], scope_copy)
     
     def create_game_scope(self, key, beating, is_beaten):
-        self.beats.update({key: beating})
-        self.is_beaten_by.update({key: is_beaten})
+        self.is_beaten_by.update({key: beating})
+        self.beats.update({key: is_beaten})
 
     def computer_turn(self):
         self.computer_choice = rand.choice(list(self.beats.keys()))
@@ -112,3 +112,9 @@ def main():
     del game
 
 main()
+
+# sample options to play with:
+# 1. 
+# rock,paper,scissors,lizard,spock
+# 2. 
+# rock,gun,lightning,devil,dragon,water,air,paper,sponge,wolf,tree,human,snake,scissors,fire
