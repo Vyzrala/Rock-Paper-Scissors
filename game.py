@@ -113,7 +113,7 @@ def main():
 
 main()
 
-# sample options to play with:
+# Sample options (scope) to play with:
 # 1. 
 # rock,paper,scissors,lizard,spock
 # 2. 
